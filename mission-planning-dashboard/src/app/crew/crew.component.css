@@ -1,10 +1,12 @@
 div{
     color: rgb(255, 0, 0);
     font-size: large;
+    padding-right: 100px;
 }
 h3{
     text-decoration: underline;
     font-size: xx-large;
+    text-align: center;
 }
 .test{
     font-style: italic;

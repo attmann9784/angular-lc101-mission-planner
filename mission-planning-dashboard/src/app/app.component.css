@@ -1,10 +1,18 @@
+/* body{
+   background-color: slategray;
+} */
+
 .box {
     display: flex;
     padding: 10px;
+    align-items: center;
+    justify-content: center;
+    
  }
- body{
-     background-color: darkcyan;
- }
+
  
+html{
+    background-color: slategray;
+}
    
  
