@@ -14,6 +14,7 @@ export class CrewComponent implements OnInit {
   ];
     blank: string = ""
     memberBeingEdited: object = null;
+    inCrew: boolean = false;
 
   constructor() { }
 
@@ -21,9 +22,16 @@ export class CrewComponent implements OnInit {
   }
 
   add(memberName: string, isFirst: boolean): void{
-    this.crew.push({name:memberName, firstMission: isFirst});
-    
+    for (let i=0; i < this.crew.length; i++) {
+      if(this.crew[i]['name'].toUpperCase() === memberName.toUpperCase()) {
+          this.inCrew = true;
+      }
   }
+  if (!this.inCrew) {
+      this.crew.push({name: memberName, firstMission: isFirst});
+  }
+  this.inCrew = false;
+}
   remove(member: object): void {
     let index = this.crew.indexOf(member);
     this.crew.splice(index, 1);
